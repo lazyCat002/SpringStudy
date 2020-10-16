@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ysc.admin.dao.SysUserMapper">
+
+    <resultMap id="BaseResultMap" type="com.ysc.admin.model.SysUser">
+        <result column="id" jdbcType="INTEGER" property="id" />
+        <result column="account" jdbcType="CLOB" property="account" />
+        <result column="passWord" jdbcType="CLOB" property="passWord" />
+        <result column="name" jdbcType="CLOB" property="name" />
+    </resultMap>
+
+    <select id="Sel" resultType="com.ysc.admin.model.SysUser">
+        select * from sys_user where id = #{id}
+    </select>
+
+    <insert id="AddUser" parameterType="com.ysc.admin.model.SysUser">
+        insert into sys_user(account,passWord,name) values (#{account},#{passWord},#{name})
+    </insert>
+</mapper>
