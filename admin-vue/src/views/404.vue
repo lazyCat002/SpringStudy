@@ -1,5 +1,5 @@
 <template>
-    <h1>404</h1>
+    <h1 class="test">404</h1>
 </template>
 
 <script>
@@ -8,6 +8,8 @@
     }
 </script>
 
-<style scoped>
-
+<style scoped lang="scss">
+    .test{
+        position: absolute;
+    }
 </style>
